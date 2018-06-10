@@ -2,6 +2,7 @@
   "extends": "airbnb",
   "rules": {
     "react/prop-types": 0,
+    "react/no-multi-comp": 0,
     "linebreak-style": "off",
     "max-len": "warn",
     "arrow-body-style": "off",

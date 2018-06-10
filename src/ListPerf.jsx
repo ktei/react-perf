@@ -1,6 +1,6 @@
 import React from 'react';
 
-class PostList extends React.PureComponent {
+class PostList extends React.Component {
   render() {
     console.log('render PostList');
     return (
@@ -16,7 +16,7 @@ export default class ListPref extends React.Component {
     super();
     this.state = {
       message: 'You have many posts',
-    }
+    };
 
     this.handleRerenderClick = this.handleRerenderClick.bind(this);
   }
@@ -27,8 +27,8 @@ export default class ListPref extends React.Component {
 
   render() {
     console.log('render ListPref');
-    const { posts } = this.props
-    const topTen = [...posts].sort((a, b) => 
+    const { posts } = this.props;
+    const topTen = [...posts].sort((a, b) =>
       b.likes - a.likes).slice(0, 9);
     return (
       <div>
@@ -36,6 +36,6 @@ export default class ListPref extends React.Component {
         <button onClick={this.handleRerenderClick}>Re-render</button>
         <PostList posts={topTen} />
       </div>
-    )
+    );
   }
 }
